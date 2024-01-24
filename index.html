@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script defer src="scripts/script.js"></script>
+        <title>Decodificador</title>
+    </head>
+    <body class="container">
+        <div class="container__main">
+            <aside class="img_alura">
+                <img  src="assets/Frame 6.svg" alt="logo-alura">
+            </aside>
+            <main class="container__pesquisa">
+                <textarea cols="30" rows="10" class="input-texto" placeholder="Digite seu texto aqui"></textarea>
+                <!-- <input class="input-texto" type="text" placeholder="Digite seu texto aqui"> -->
+                <div class="container__pesquisa__btns">
+                    <span>
+                        <iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon>Apenas letras minúsculas e sem acento.
+                    </span>
+                    <div class="container__pesquisa__btns__btn">
+                        <button type="button" class="btns cript">Criptografar</button>
+                        <button type="button" class="btns decript">Descriptografar</button>
+                    </div>
+                </div>
+            </main>
+            <aside class="container__resultado">
+                <div class="container__resultado__conteudo" style="display: flex;">
+                    <img src="assets/High quality products 1 1.svg" alt="img-resultado">
+                    <div class="container__resultado__texto">
+                        <div>
+                            <span>Nenhuma mensagem encontrada</span>
+                            <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="decrip-encrip" style="display: none;">
+                    <textarea id="resultado-decrip" class="textarea-resultado" cols="30" rows="10" readonly></textarea>
+                    <button type="button" class="btns btn-copiar" >Copiar</button>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            Desenvolvido por Thiago Macedo
+        </footer>
+        
+    </body>
+</html>
