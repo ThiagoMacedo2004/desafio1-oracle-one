@@ -1,5 +1,5 @@
 
-let cript = document.querySelector('.cript')
+let cript = document.querySelector('button:nth-child(1)')
 let descript = document.querySelector('.decript')
 let copiar = document.querySelector('.btn-copiar')
 
@@ -10,9 +10,20 @@ let divResultado = document.querySelector('.decrip-encrip')
 document.querySelector('.input-texto').addEventListener('keyup', () => {
     let text = document.querySelector('.input-texto').value
 
-    text = text.toLowerCase()
-    document.querySelector('.input-texto').value = text
+    if(text == '') {
+        divResultadoImg.style.display = 'flex'
+        divResultado.style.display = 'none'
+        btnDesabled()
+    } else {
 
+        text = text.toLowerCase()
+        document.querySelector('.input-texto').value = text
+    
+        // mostrarResultado()
+        btnDesabled()
+    }
+
+   
 })
 
 
@@ -21,6 +32,7 @@ cript.addEventListener('click', () => {
 
     if(text) {
         mostrarResultado()
+        criptografar()
     } else {
         divResultadoImg.style.display = 'flex'
         divResultado.style.display = 'none'
@@ -36,9 +48,9 @@ copiar.addEventListener('click', () => {
 })
 
 function mostrarResultado() {
+
     divResultadoImg.style.display = 'none'
     divResultado.style.display = 'flex'
-    criptografar()
 }
 
 function criptografar() {
@@ -69,6 +81,24 @@ function copy() {
     let copyText = document.querySelector("#resultado-decrip");
     copyText.select();
     document.execCommand("copy");
-  }
+}
+
+function btnDesabled() {
+    console.log('btn-disabed')
+    let texto = document.querySelector('.input-texto')
+    let btnCript = document.querySelector('button:nth-child(1)')
+    if(texto.value == '') {
+        // btnCript.classList.remove('cript')
+        btnCript.classList.add('btn-desabled')
+        btnCript.setAttribute('disabled', true)
+
+    } else {
+        btnCript.classList.remove('btn-desabled')
+        btnCript.classList.add('cript')
+        btnCript.removeAttribute('disabled')
+    }
+}
+
+btnDesabled()
 
 

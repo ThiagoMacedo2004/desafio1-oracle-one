@@ -12,6 +12,7 @@
     display: flex;
     background-color: #E5E5E5;
     flex-direction: column;
+    justify-content: space-between;
     overflow-x: hidden;
 }
 
@@ -92,10 +93,16 @@
     cursor: pointer;
 }
 
-.container__pesquisa__btns__btn button:nth-child(1) {
+.cript {
     background-color: #0A3871;
     color: #FFFFFF;
 }
+
+.btn-desabled {
+    background-color: slategrey;
+    border: none;
+}
+
 .container__pesquisa__btns__btn button:nth-child(2) {
     background-color: #D8DFE8;
     color: #0A3871;
