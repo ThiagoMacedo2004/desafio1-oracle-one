@@ -16,10 +16,10 @@
 .container__main {
     padding: 40px;    
     display: flex;
-    gap: 80px;
+    gap: 40px;
     background-color: #E5E5E5;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    
 }
 
 .img_alura img {
