@@ -7,10 +7,12 @@
 }
 
 .container {
+    align-items: center;
     min-height: 100vh;
     display: flex;
     background-color: #E5E5E5;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .container__main {
@@ -179,5 +181,6 @@ footer {
     font-size: 1.3rem;
     font-weight: 300;
     text-align: center;
-    line-height: 64px
+    line-height: 64px;
+    width: 100%;
 }
